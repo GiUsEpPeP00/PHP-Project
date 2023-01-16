@@ -6,11 +6,11 @@
     $LoginAdmin = password_verify($password, "$passwordFileDecoded->passwordAdmin");
     if ($LoginUtente) {
         $Utente = true;
-        header("Location: sondaggio.php?Utente");
+        header("Location: sondaggioUtente.php");
     } else {
         if ($LoginAdmin) {
             $Admin = true;
-            header("Location: sondaggio.php?Utente");
+            header("Location: sondaggioAdmin.php");
         } else {
             $passwordErrata = false;
             header("Location: login.php?passwordErrata");
